@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width,initial-scale=1'/>
+<title>SUPERFAST GOLDEN BIRD RESEARCH INDUSTRIES PRIVATE LIMITED — Directors</title>
+<link rel='stylesheet' href='assets/styles.css'/>
+</head>
+<body>
+
+<header class="container header">
+  <div class="brand"><h1 id="companyName">Company Name</h1><div id="companyShort" style="color:#475569"></div></div>
+  <nav>
+    <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="directors.html">Directors</a> | <a href="objects.html">Objects</a> | <a href="legal.html">Legal</a> | <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class='container'>
+<section class='card'><h2>Directors</h2><ul><li><strong>Amitesh Raikwar</strong></li><li><strong>Monika Raikwar</strong></li></ul><p><strong>DIN 06440519 (allotted 01-12-2012)</strong></p><p>DIN/IEC details are available in the uploaded documents (DIN allotment letter, IEC certificate).</p>
+</main>
+
+<footer class="footer">
+  © <span id="year"></span> SUPERFAST GOLDEN BIRD RESEARCH INDUSTRIES PRIVATE LIMITED
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src='assets/company.js'></script>
+<script>
+if(typeof COMPANY !== 'undefined'){document.getElementById('companyName').textContent = COMPANY.name; document.getElementById('companyShort').textContent = COMPANY.registered_state;}
+</script>
+</body>
+</html>
