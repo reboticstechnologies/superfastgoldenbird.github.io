@@ -1,0 +1,10 @@
+
+body{font-family:Inter,Segoe UI,Roboto,Arial,system-ui;background:#f7fafc;color:#0f1724;margin:0}
+.container{max-width:1100px;margin:24px auto;padding:18px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand h1{margin:0;font-size:20px}
+.card{background:white;border-radius:8px;padding:16px;box-shadow:0 6px 18px rgba(15,23,36,0.06);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:16px}
+.chip{display:inline-block;padding:6px 10px;background:#eef2ff;border-radius:999px;margin:4px;font-size:13px}
+.footer{font-size:13px;color:#475569;text-align:center;padding:12px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
