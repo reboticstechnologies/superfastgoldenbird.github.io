@@ -2,7 +2,7 @@
   "name": "superfast-registration",
   "version": "1.0.0",
   "private": true,
-  "engines": { "node": "18.x" },
+  "engines": { "node": "22.x" },
   "dependencies": {
     "octokit": "^2.0.0"
   }
