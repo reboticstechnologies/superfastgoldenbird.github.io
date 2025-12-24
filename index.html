@@ -1,48 +1,177 @@
-<!doctype html>
-<html lang='en'>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset='utf-8'/>
-<meta name='viewport' content='width=device-width,initial-scale=1'/>
-<title>SUPERFAST GOLDEN BIRD RESEARCH INDUSTRIES PRIVATE LIMITED — Home</title>
-<link rel='stylesheet' href='assets/styles.css'/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Style Login Dashboard</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f2f5;
+}
+
+/* LOGIN PAGE */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px;
+  width: 360px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.login-box h1 {
+  color: #1877f2;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #1877f2;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #145dbf;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: none;
+}
+
+.topbar {
+  background: #1877f2;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #fff;
+  height: calc(100vh - 50px);
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.sidebar a:hover {
+  background: #e4e6eb;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.post {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+</style>
 </head>
+
 <body>
 
-<header class="container header">
-  <div class="brand"><h1 id="companyName">Company Name</h1><div id="companyShort" style="color:#475569"></div></div>
-  <nav>
-    <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="directors.html">Directors</a> | <a href="objects.html">Objects</a> | <a href="legal.html">Legal</a> | <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<main class='container'>
-
-<section class="card">
-  <h2>SUPERFAST GOLDEN BIRD RESEARCH INDUSTRIES PRIVATE LIMITED</h2>
-  <div style="color:#475569">Superfast Golden Bird Research Industries</div>
-  <p style="margin-top:12px">A diversified private limited company incorporated with a wide range of objects including R&D, manufacturing, forensic services, agriculture, IT and trading. Registered office: Madhya Pradesh.</p>
-</section>
-<div class="grid">
-  <div>
-    <section class="card"><h3>About</h3><p>See Memorandum of Association for complete list of objects.</p></section>
-    <section class="card"><h3>Key Highlights</h3><ul><li>Authorised share capital: Rs.1,00,000 (10,000 Equity Shares of Rs.10/- each)</li><li>First directors: Amitesh Raikwar, Monika Raikwar</li><li>IEC: IEC 1112005412 (Date of issue: 08-03-2013)</li><li>PAN: PAN AASCS4823L</li></ul></section>
+<!-- LOGIN -->
+<div class="login-container" id="loginPage">
+  <div class="login-box">
+    <h1>facebook</h1>
+    <p>Login to your account</p>
+    <input type="email" id="email" placeholder="Email address">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Log In</button>
   </div>
-  <aside>
-    <section class="card"><h3>Contact / Legal</h3><div>Registered office: State of Madhya Pradesh. (See MOA for city-level details)</div></section>
-    <section class="card"><h3>Quick Facts</h3><span class='chip'>Research & Development, Industrial research & consultancy</span><span class='chip'>Manufacturing, trading, import & export across multiple sectors</span><span class='chip'>Forensic science services (DNA, forensic engineering, audio/video analysis, etc.)</span><span class='chip'>Agriculture, chemicals, healthcare, education, transport, IT and more (diverse objects)</span></section>
-  </aside>
 </div>
 
-</main>
+<!-- DASHBOARD -->
+<div class="dashboard" id="dashboard">
+  <div class="topbar">
+    <div>facebook</div>
+    <div>Welcome, User</div>
+  </div>
 
-<footer class="footer">
-  © <span id="year"></span> SUPERFAST GOLDEN BIRD RESEARCH INDUSTRIES PRIVATE LIMITED
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <div class="layout">
+    <div class="sidebar">
+      <a href="#">🏠 Home</a>
+      <a href="#">👤 Profile</a>
+      <a href="#">💬 Messages</a>
+      <a href="#" onclick="logout()">🚪 Logout</a>
+    </div>
 
-<script src='assets/company.js'></script>
+    <div class="content">
+      <div class="post">
+        <h3>John Doe</h3>
+        <p>This is a Facebook-style post layout.</p>
+      </div>
+      <div class="post">
+        <h3>Jane Smith</h3>
+        <p>Welcome to your dashboard!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-if(typeof COMPANY !== 'undefined'){document.getElementById('companyName').textContent = COMPANY.name; document.getElementById('companyShort').textContent = COMPANY.registered_state;}
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if(email && password) {
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("dashboard").style.display = "block";
+  } else {
+    alert("Please enter email and password");
+  }
+}
+
+function logout() {
+  document.getElementById("dashboard").style.display = "none";
+  document.getElementById("loginPage").style.display = "flex";
+}
 </script>
+
 </body>
 </html>
