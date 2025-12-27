@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="profile">
+  <img src="https://i.pravatar.cc/150" class="avatar">
+  <h2 id="userName"></h2>
+  <p id="userEmail"></p>
+</div>
+
+<div class="card">
+  <h3>Your Subscription</h3>
+  <p id="subscriptionStatus"></p>
+  <a href="subscribe.html">Manage Subscription</a>
+</div>
+
+<div class="card">
+  <h3>Available Services</h3>
+  <ul id="servicesList"></ul>
+</div>
+
+<a href="logout.html">Logout</a>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
